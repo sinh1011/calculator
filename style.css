@@ -1,0 +1,124 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== CALCULATOR CONTAINER ===== */
+.calculator {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 24px;
+  width: 320px;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== DISPLAY ===== */
+.display {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 16px;
+  padding: 20px 16px 14px;
+  margin-bottom: 20px;
+  text-align: right;
+  min-height: 90px;
+}
+
+.expression {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.45);
+  min-height: 20px;
+  margin-bottom: 6px;
+  word-break: break-all;
+}
+
+.result {
+  font-size: 42px;
+  font-weight: 300;
+  color: #ffffff;
+  word-break: break-all;
+  line-height: 1.1;
+}
+
+/* ===== BUTTON GRID ===== */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* ===== BUTTON BASE ===== */
+.btn {
+  padding: 18px;
+  border: none;
+  border-radius: 14px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s, background 0.2s;
+  outline: none;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.93);
+}
+
+/* ===== BUTTON VARIANTS ===== */
+.btn-number {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+
+.btn-number:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-operator {
+  background: rgba(100, 160, 255, 0.2);
+  color: #7eb6ff;
+}
+
+.btn-operator:hover {
+  background: rgba(100, 160, 255, 0.35);
+}
+
+.btn-clear {
+  background: rgba(255, 80, 80, 0.2);
+  color: #ff7878;
+}
+
+.btn-clear:hover {
+  background: rgba(255, 80, 80, 0.35);
+}
+
+.btn-equals {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #ffffff;
+  font-size: 22px;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-equals:hover {
+  box-shadow: 0 6px 28px rgba(102, 126, 234, 0.6);
+}
+
+/* ===== SPAN UTILITIES ===== */
+.span-two {
+  grid-column: span 2;
+}
+
+.span-four {
+  grid-column: span 4;
+}
